@@ -5,24 +5,58 @@ using namespace std;
 class Student{
 	int studid;
 	string name;
-	int m1,m2,m3;
+	int marks[3]
 	
 	Student(){
 		
 	}
-	Student(int studid,string name,int m1,int m2,int m3){
+	Student(int studid,string name,int[] arr){
 		this->studid=studid;
 		this->name=name;
-		this->m1=m1;
-		this->m2=m2;
-		this->m3=m3;
+		for(int i=0;i<3;i++){
+			marks[i] = arr[i];
+		}
 	}
 	
 	int getid(){
+		
 	}
+	void setid(int a){
+		
+	}
+	
+	int getname(){
+		
+	}
+	void setname(string a){
+		
+	}
+	
+	int* getmarks(){
+		return marks;
+	}
+	
+	void setmarks(int[] a){
+		for(int i=0;i<3;i++){
+			marks[i] = a[i];
+		}
+	}
+	
+	
+	
 	int total(){
+		int result=0;
+		for(int i=0;i<3;i++){
+			result = result+marks[i];
+		}
 	}
-	int percenage(){
+	
+	double percenage(){
+		double percent=0.0;
+		int result = total();
+		percent = result/3;
+		return percent;
+		
 	}
 	
 };
